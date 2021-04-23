@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="airtagVideoPlayer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LUS-yX-3WR">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="airtag" translatesAutoresizingMaskIntoConstraints="NO" id="swK-I8-s7K">
+                                        <rect key="frame" x="20" y="569" width="374" height="204"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="204" id="p2K-42-eLQ"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UVw-ta-XYc">
+                                        <rect key="frame" x="25" y="805" width="364" height="49"/>
+                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                        <state key="normal" title="$29.00">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="labelColor"/>
+                                <constraints>
+                                    <constraint firstItem="UVw-ta-XYc" firstAttribute="top" secondItem="swK-I8-s7K" secondAttribute="bottom" constant="32" id="8AP-mZ-gPi"/>
+                                    <constraint firstItem="UVw-ta-XYc" firstAttribute="top" secondItem="swK-I8-s7K" secondAttribute="bottom" constant="32" id="JpH-Ny-1lE"/>
+                                    <constraint firstAttribute="trailing" secondItem="UVw-ta-XYc" secondAttribute="trailing" constant="25" id="SAg-1j-LJp"/>
+                                    <constraint firstItem="swK-I8-s7K" firstAttribute="leading" secondItem="LUS-yX-3WR" secondAttribute="leading" constant="20" id="jHg-iK-Clw"/>
+                                    <constraint firstAttribute="bottom" secondItem="UVw-ta-XYc" secondAttribute="bottom" constant="42" id="mVE-Kd-a4N"/>
+                                    <constraint firstItem="UVw-ta-XYc" firstAttribute="leading" secondItem="LUS-yX-3WR" secondAttribute="leading" constant="25" id="rei-nL-3ib"/>
+                                    <constraint firstAttribute="trailing" secondItem="swK-I8-s7K" secondAttribute="trailing" constant="20" id="zaw-8a-xhn"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="LUS-yX-3WR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7Ba-XL-t8y"/>
+                            <constraint firstAttribute="bottom" secondItem="LUS-yX-3WR" secondAttribute="bottom" id="Q8P-u6-PT6"/>
+                            <constraint firstItem="LUS-yX-3WR" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="fCk-Tk-1RH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LUS-yX-3WR" secondAttribute="trailing" id="icN-ga-7nQ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="background" destination="LUS-yX-3WR" id="tG2-ZY-1LO"/>
+                        <outlet property="button" destination="UVw-ta-XYc" id="eKh-5h-cs0"/>
+                        <outlet property="img" destination="swK-I8-s7K" id="fQo-iM-bFC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140.57971014492756" y="36.830357142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="airtag" width="1295" height="752"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
